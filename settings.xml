@@ -39,7 +39,7 @@
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://54.162.227.5:8081/devops/repository/maven-public/</url>
+      <url>http://98.81.8.111:8081/devops/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
@@ -53,12 +53,12 @@
       <repositories>
         <repository>
           <id>dependency-release</id>
-          <url>http://54.162.227.5:8081/devops/repository/dependency-release/</url>
+          <url>http://98.81.8.111:8081/devops/repository/dependency-release/</url>
         </repository>
 
         <repository>
           <id>project-test-proxy</id>
-          <url>http://54.162.227.5:8081/devops/repository/project-test-proxy/</url>
+          <url>http://98.81.8.111:8081/devops/repository/project-test-proxy/</url>
         </repository>
 
         <repository>
@@ -79,7 +79,7 @@
     <profile>
       <id>sonar</id>
       <properties>
-        <sonar.host.url>http://54.162.227.5:8081/</sonar.host.url>
+        <sonar.host.url>http://98.81.8.111:8081/</sonar.host.url>
         <sonar.login>sqa_9ec2b022489f3e4fc9af77e884e83f3e6aadcfb5</sonar.login>
       </properties>
     </profile>
