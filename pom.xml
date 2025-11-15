@@ -27,7 +27,7 @@
   </repository>
                  <repository>
     <id>project-test-proxy</id>
-    <url>http:/http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
+    <url>http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
   </repository>
     </repositories>
 
