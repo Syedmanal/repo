@@ -35,7 +35,7 @@
   <mirrors>
     <mirror>
       <id>project-test-proxy</id>
-      <url>http://172.31.42.123:9000/devops/repository/project-test-proxy/</url>
+      <url>http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
       <mirrorOf>central</mirrorOf>
     </mirror>
   </mirrors>
@@ -44,7 +44,7 @@
     <profile>
       <id>sonar</id>
       <properties>
-        <sonar.host.url>http://172.31.44.79:9000</sonar.host.url>
+        <sonar.host.url>http://54.86.90.205:9000</sonar.host.url>
                 <sonar.login>sqa_9ec2b022489f3e4fc9af77e884e83f3e6aadcfb5</sonar.login>
       </properties>
     </profile>
