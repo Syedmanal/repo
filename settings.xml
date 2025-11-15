@@ -3,22 +3,22 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                               https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
+  <!-- ------------------------------------------------------------ -->
+  <!-- Server credentials (Nexus)                                   -->
+  <!-- ------------------------------------------------------------ -->
   <servers>
-    <!-- Nexus snapshot deployment -->
     <server>
       <id>nexus-snapshots</id>
       <username>admin</username>
       <password>Nexus</password>
     </server>
 
-    <!-- Nexus release deployment -->
     <server>
       <id>nexus-releases</id>
       <username>admin</username>
       <password>Nexus</password>
     </server>
 
-    <!-- Public (proxy) repository -->
     <server>
       <id>dependency-release</id>
       <username>admin</username>
@@ -32,25 +32,61 @@
     </server>
   </servers>
 
+  <!-- ------------------------------------------------------------ -->
+  <!-- Mirror all Maven repos through Nexus                         -->
+  <!-- ------------------------------------------------------------ -->
   <mirrors>
     <mirror>
-      <id>project-test-proxy</id>
-      <url>http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
-      <mirrorOf>central</mirrorOf>
+      <id>nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <url>http://54.86.90.205:9000/devops/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
+  <!-- ------------------------------------------------------------ -->
+  <!-- Nexus & Sonar repositories                                   -->
+  <!-- ------------------------------------------------------------ -->
   <profiles>
+    <profile>
+      <id>nexus</id>
+
+      <repositories>
+        <repository>
+          <id>dependency-release</id>
+          <url>http://54.86.90.205:9000/devops/repository/dependency-release/</url>
+        </repository>
+
+        <repository>
+          <id>project-test-proxy</id>
+          <url>http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
+        </repository>
+
+        <repository>
+          <id>central</id>
+          <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+      </repositories>
+
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>https://repo.maven.apache.org/maven2/</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+
+    <!-- SonarQube -->
     <profile>
       <id>sonar</id>
       <properties>
         <sonar.host.url>http://54.86.90.205:9000</sonar.host.url>
-                <sonar.login>sqa_9ec2b022489f3e4fc9af77e884e83f3e6aadcfb5</sonar.login>
+        <sonar.login>sqa_9ec2b022489f3e4fc9af77e884e83f3e6aadcfb5</sonar.login>
       </properties>
     </profile>
   </profiles>
 
   <activeProfiles>
+    <activeProfile>nexus</activeProfile>
     <activeProfile>sonar</activeProfile>
   </activeProfiles>
 
