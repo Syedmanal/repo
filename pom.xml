@@ -48,12 +48,7 @@
             <scope>provided</scope>
         </dependency>
 
-         <dependency>
-  <groupId>com.depend</groupId>
-  <artifactId>helloworld</artifactId>
-  <version>1.1.0</version>   <!-- version must match Nexus uploaded version -->
-</dependency>
-    </dependencies>
+        
 
     <build>
         <finalName>devops111</finalName>
