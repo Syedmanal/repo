@@ -39,7 +39,7 @@
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://54.162.227.5:8081//devops/repository/maven-public/</url>
+      <url>http://54.162.227.5:8081/devops/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
@@ -53,12 +53,12 @@
       <repositories>
         <repository>
           <id>dependency-release</id>
-          <url>http://54.86.90.205:9000/devops/repository/dependency-release/</url>
+          <url>http://54.162.227.5:8081/devops/repository/dependency-release/</url>
         </repository>
 
         <repository>
           <id>project-test-proxy</id>
-          <url>http://54.162.227.5:8081//devops/repository/project-test-proxy/</url>
+          <url>http://54.162.227.5:8081/devops/repository/project-test-proxy/</url>
         </repository>
 
         <repository>
