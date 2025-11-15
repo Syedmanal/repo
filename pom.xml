@@ -19,23 +19,23 @@
         <sonar.organization>raghudevops284</sonar.organization>
     </properties>
 
-    <!-- ================= Nexus Repositories ================= -->
+    <!-- ========== Nexus Repositories (READ ONLY) ========== -->
     <repositories>
         <repository>
             <id>dependency-release</id>
-            <url>http://54.162.227.5:8081/devops/repository/dependency-release/</url>
+            <url>http://54.162.227.5:8081/repository/dependency-release/</url>
         </repository>
 
         <repository>
             <id>project-test-proxy</id>
-            <url>http://54.162.227.5:8081/devops/repository/project-test-proxy/</url>
+            <url>http://54.162.227.5:8081/repository/project-test-proxy/</url>
         </repository>
     </repositories>
 
-    <!-- ================= Dependencies ================= -->
+    <!-- ========== Dependencies ========== -->
     <dependencies>
 
-        <!-- JUnit test dependency -->
+        <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -43,22 +43,23 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Servlet API for JSP/Servlet webapps -->
+        <!-- Servlet API -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 
-    <!-- ================= Build Section ================= -->
+    <!-- ========== Build Plugins ========== -->
     <build>
         <finalName>devops111</finalName>
 
         <plugins>
 
-            <!-- Compiler Plugin for Java 17 -->
+            <!-- Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -69,14 +70,14 @@
                 </configuration>
             </plugin>
 
-            <!-- WAR Plugin -->
+            <!-- WAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
 
-            <!-- Sonar Plugin -->
+            <!-- Sonar -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
@@ -86,19 +87,23 @@
         </plugins>
     </build>
 
-    <!-- ================= Deployment to Nexus ================= -->
+    <!-- ========== CORRECT Deployment URLs (WRITE) ========== -->
     <distributionManagement>
+
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>Nexus Snapshot Repository</name>
-            <url>http://54.162.227.5:8081/devops/repository/test-SNAPSHOT/</url>
+            <!-- MUST NOT contain /devops/ -->
+            <url>http://54.162.227.5:8081/repository/test-SNAPSHOT/</url>
         </snapshotRepository>
 
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Release Repository</name>
-            <url>http://54.162.227.5:8081/devops/repository/project-release/</url>
+            <!-- MUST NOT contain /devops/ -->
+            <url>http://54.162.227.5:8081/repository/project-release/</url>
         </repository>
+
     </distributionManagement>
 
 </project>
