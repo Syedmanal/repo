@@ -23,12 +23,12 @@
     <repositories>
         <repository>
             <id>dependency-release</id>
-            <url>http://54.162.227.5:8081/repository/dependency-release/</url>
+            <url>http://98.81.8.111:8081/repository/dependency-release/</url>
         </repository>
 
         <repository>
             <id>project-test-proxy</id>
-            <url>http://54.162.227.5:8081/repository/project-test-proxy/</url>
+            <url>http://98.81.8.111:8081/repository/project-test-proxy/</url>
         </repository>
     </repositories>
 
@@ -94,14 +94,14 @@
             <id>nexus-snapshots</id>
             <name>Nexus Snapshot Repository</name>
             <!-- MUST NOT contain /devops/ -->
-            <url>http://54.162.227.5:8081/repository/test-SNAPSHOT/</url>
+            <url>http://98.81.8.111:8081/repository/test-SNAPSHOT/</url>
         </snapshotRepository>
 
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Release Repository</name>
             <!-- MUST NOT contain /devops/ -->
-            <url>http://54.162.227.5:8081/repository/project-release/</url>
+            <url>http://98.81.8.111:8081/repository/project-release/</url>
         </repository>
 
     </distributionManagement>
