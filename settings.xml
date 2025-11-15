@@ -39,7 +39,7 @@
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://54.86.90.205:9000/devops/repository/maven-public/</url>
+      <url>http://3.86.235.238:9000/devops/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
@@ -58,7 +58,7 @@
 
         <repository>
           <id>project-test-proxy</id>
-          <url>http://54.86.90.205:9000/devops/repository/project-test-proxy/</url>
+          <url>http://3.86.235.238:9000/devops/repository/project-test-proxy/</url>
         </repository>
 
         <repository>
@@ -79,7 +79,7 @@
     <profile>
       <id>sonar</id>
       <properties>
-        <sonar.host.url>http://54.86.90.205:9000</sonar.host.url>
+        <sonar.host.url>http://3.86.235.238:9000</sonar.host.url>
         <sonar.login>sqa_9ec2b022489f3e4fc9af77e884e83f3e6aadcfb5</sonar.login>
       </properties>
     </profile>
