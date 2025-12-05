@@ -3,9 +3,7 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                               https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <!-- ------------------------------------------------------------ -->
-  <!-- Server credentials (Nexus)                                   -->
-  <!-- ------------------------------------------------------------ -->
+  <!-- Server credentials (Nexus) -->
   <servers>
     <server>
       <id>nexus-snapshots</id>
@@ -32,9 +30,7 @@
     </server>
   </servers>
 
-  <!-- ------------------------------------------------------------ -->
-  <!-- Mirror all Maven repos through Nexus                         -->
-  <!-- ------------------------------------------------------------ -->
+  <!-- Mirror all Maven repos through Nexus -->
   <mirrors>
     <mirror>
       <id>nexus</id>
@@ -43,9 +39,7 @@
     </mirror>
   </mirrors>
 
-  <!-- ------------------------------------------------------------ -->
-  <!-- Nexus & Sonar repositories                                   -->
-  <!-- ------------------------------------------------------------ -->
+  <!-- Nexus & Sonar repositories -->
   <profiles>
     <profile>
       <id>nexus</id>
@@ -75,7 +69,6 @@
       </pluginRepositories>
     </profile>
 
-    <!-- SonarQube -->
     <profile>
       <id>sonar</id>
       <properties>
@@ -91,3 +84,4 @@
   </activeProfiles>
 
 </settings>
+
